@@ -1,4 +1,4 @@
-# AI Task Resource Allocator
+# Smart Task Resource Allocator (STRA)
 
 A system based on a machine learning model (Decision Tree) to predict the required resource level (low / medium / high) for each AI task, helping to allocate resources efficiently in an operating system or cloud environment.
 
