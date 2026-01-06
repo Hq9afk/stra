@@ -4,7 +4,7 @@ A system based on a machine learning model (Decision Tree) to predict the requir
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ai_task_allocator/
@@ -27,7 +27,7 @@ ai_task_allocator/
 
 ---
 
-## ⚙️ Environment Requirements
+## Environment Requirements
 
 - Python 3.8+
 - Libraries:
@@ -37,9 +37,9 @@ ai_task_allocator/
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
-### 🔹 Step 1: Collect task metrics
+### Step 1: Collect task metrics
 
 ```bash
 python generate_input_data.py
@@ -47,7 +47,7 @@ python generate_input_data.py
 - Task metrics are collected and classified based on resource-consumption
 - Collected data are used as input for AI model
 - Saves data to `data/input_data.csv`
-### 🔹 Step 2: Train the Model
+### Step 2: Train the Model
 
 ```bash
 python model/train_model.py
@@ -58,7 +58,7 @@ python model/train_model.py
 
 ---
 
-### 🔹 Step 3: Single Prediction (CLI)
+### Step 3: Single Prediction (CLI)
 
 ```bash
 python main.py
@@ -75,12 +75,12 @@ python main.py
   ```
 - Result:
   ```
-  📊 Predicted resource allocation: MEDIUM
+  Predicted resource allocation: MEDIUM
   ```
 
 ---
 
-### 🔹 Step 4: Batch Prediction from CSV
+### Step 4: Batch Prediction from CSV
 
 ```bash
 python -c "from model import predictor; predictor.predict_from_csv('data/input_data.csv', 'data/output_data.csv')"
@@ -91,7 +91,7 @@ python -c "from model import predictor; predictor.predict_from_csv('data/input_d
 
 ---
 
-### 🔹 Step 5: Quick Test
+### Step 5: Quick Test
 
 ```bash
 python test/test_prediction.py
@@ -102,7 +102,7 @@ python test/test_prediction.py
 
 ---
 
-## 🧪 Sample Data (`train_data.csv`)
+## Sample Data (`train_data.csv`)
 
 ```csv
 task_type,cpu_usage,mem_usage,io_usage,duration,priority,resource_allocated
@@ -117,30 +117,8 @@ svchost.exe,0,0,0,8123,low,medium
 
 ---
 
-## 📌 Notes
+## Notes
 
 - Tasks are automatically encoded using an internal mapping table.
 - Can be extended to other models such as Random Forest, Logistic Regression.
 - Suitable for OS environments, container schedulers, or cloud resource planners.
-
----
-
-## 👥 Team Members
-
-- **Member 1**: Preprocessing & workload monitoring system  
-  - Built the workload simulation module
-  - Collected system resource usage data using `psutil`
-  - Created workload input for the AI model.
-
-- **Member 2**: AI model training  
-  - Designed and trained the prediction model using Random Forest
-  - Handled data splitting, training, evaluation, and model saving.
-
-- **Member 3**: Integration & testing  
-  - Integrated the AI model with the system
-  - Implemented `main.py` to process CSV input and write predictions. 
-  - Performed functional testing.
-
-- **Member 4**: Report & presentation  
-  - Wrote project documentation, testing reports, and created presentation slides. 
-  - Participated in overall testing.
