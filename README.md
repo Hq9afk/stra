@@ -4,29 +4,6 @@ A system based on a machine learning model (Decision Tree) to predict the requir
 
 ---
 
-## Project Structure
-
-```
-ai_task_allocator/
-├── data/
-│   ├── iuput_data.csv           # Iutput data
-│   ├── ouput_data.csv           # Output data
-│   └── train_data.csv           # Training data
-├── model/
-│   ├── train_model.py           # Model training
-│   ├── predictor.py             # Single and CSV prediction
-│   └── model.pkl                # Saved model
-├── utils/
-│   └── preprocessing.py         # Data processing functions
-├── test/
-│   └── test_prediction.py       # Quick test
-├── generate_input_data.py       # Collect tasks metrics
-├── main.py                      # CLI program
-└── README.md                    # User guide
-```
-
----
-
 ## Environment Requirements
 
 - Python 3.8+
